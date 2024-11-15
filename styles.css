@@ -28,17 +28,25 @@ h2 {
     color: #555;
 }
 
-.profile-image {
-    max-width: 300px; /* 大きな画像の最大幅を設定 */
-    width: 100%; /* 小さい画面でも画像が幅いっぱいになる */
-    border-radius: 20px; /* 丸みの角度を調整 */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em; /* 画像間のスペース */
     margin-top: 1em;
 }
 
-/* 小さい画面向け */
+.profile-image {
+    max-width: 300px; /* PCでの最大サイズ */
+    width: 100%; /* スマホでの画像幅調整 */
+    border-radius: 20px; /* 画像の角を丸くする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+}
+
+/* スマホ向け */
 @media (max-width: 600px) {
     h1 {
-        font-size: 2em; /* タイトルのサイズを微調整 */
+        font-size: 2em; /* タイトルのサイズを縮小 */
     }
 
     h2 {
@@ -46,14 +54,18 @@ h2 {
     }
 
     .profile-image {
-        max-width: 200px; /* スマホ画面での画像最大サイズを調整 */
+        max-width: 150px; /* 小さい画面では画像サイズを縮小 */
+    }
+
+    .images {
+        gap: 0.5em; /* スペースを縮小 */
     }
 }
 
 /* タブレット向け */
 @media (min-width: 600px) and (max-width: 1024px) {
     .profile-image {
-        max-width: 400px; /* タブレット用に画像をさらに大きく */
+        max-width: 250px; /* タブレット用画像サイズ */
     }
 }
 
