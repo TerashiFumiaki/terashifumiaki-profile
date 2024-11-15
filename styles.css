@@ -8,10 +8,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
+    padding: 1em;
+    max-width: 90%;
 }
 
 h1 {
@@ -27,7 +29,24 @@ h2 {
 }
 
 .profile-image {
-    max-width: 150px;
+    max-width: 600px;
     border-radius: 50%;
     margin-top: 1em;
+    width: 100%; /* Small screens */
+    max-width: 150px; /* Cap for larger screens */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .profile-image {
+        max-width: 100px; /* Reduce image size */
+    }
 }
