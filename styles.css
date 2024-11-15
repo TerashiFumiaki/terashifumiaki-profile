@@ -47,6 +47,6 @@ h2 {
     }
 
     .profile-image {
-        max-width: 100px; /* Reduce image size */
+        max-width: 600px; /* Reduce image size */
     }
 }
